@@ -116,17 +116,7 @@ React Native wrapper for Intercom.io. Based off of [intercom-cordova](https://gi
         }
         ```
 
-    1. Decide which type of push messaging you want to install, and add choosen method to `android/app/build.gradle`. If "Google Cloud Messaging (GCM)", then:
-
-        ```gradle
-        dependencies {
-
-          //...other configuration here...
-
-          compile 'io.intercom.android:intercom-sdk:5.+'
-        }
-        ```
-        If "Firebase Cloud Messaging(FCM)", then:
+    1. Install Intercom with Firebase Cloud Messaging (FCM):
 
         ```gradle
         dependencies {
@@ -134,7 +124,16 @@ React Native wrapper for Intercom.io. Based off of [intercom-cordova](https://gi
           //...other configuration here...
 
           compile 'io.intercom.android:intercom-sdk-fcm:5.+'
-          compile 'com.google.firebase:firebase-messaging:11.+'
+        }
+        ```
+    1. Install Intercom without Push Messaging:
+
+        ```gradle
+        dependencies {
+
+          //...other configuration here...
+
+          compile 'io.intercom.android:intercom-sdk-base:5.+'
         }
         ```
 
